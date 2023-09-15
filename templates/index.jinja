@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>My Travel Bucketlist</title>
+    </head>
+    <body>
+        {% for country in countries %}
+            <b>{{ country.country_name }}</b>
+        {% endfor %}
+        <br>
+        {% for city in cities %}
+            {{ city.city_name }}, {{ city.visited }}
+        {% endfor %}
+    </body>
+</html>
