@@ -1,0 +1,26 @@
+{% extends 'base.jinja'%}
+
+{% block content %}
+<div class="new_form">
+    <h1>Your Destination</h1>
+    
+    <b>Country:</b> {{ country.country_name }}
+    <b>City:</b>
+    {% if country.id == city.country_id %}
+        {{ city.city_name }}
+    {% endif %}
+    {% if city.visited %}
+        <span> Visited? &#9989;</span><br>
+    {% else %}
+        <span> Visited? &#x274C;</span><br> 
+    {% endif %} 
+    
+
+<p><a href="{{ country.id }}/{{ city.id }}/edit">Want to edit this destination?</a></p>    {# doesn;t work#}
+<p><a href="/bucketlist">Return to Bucketlist</a></p>
+
+
+
+</div>
+{% endblock %}
+

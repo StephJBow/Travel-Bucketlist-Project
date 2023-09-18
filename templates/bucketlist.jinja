@@ -1,0 +1,32 @@
+{% extends 'base.jinja'%}
+
+{% block content %}
+<body>
+
+<table id="list_here">
+    <tr>
+        <th>Country</th>
+        <th>City</th>
+        <th>Visited</th>
+    </tr>
+
+    {% for city in cities %}
+    <tr>
+        <td>{{ city.country.country_name }}</td>
+        <td>{{ city.city_name }} </td>
+        <td>{% if city.visited %}
+            <span> &#9989;</span>
+        {% else %}
+            <span> &#x274C;</span>
+        {% endif %}</td>
+        <td><a href="bucketlist/{{ city.country.id }}/{{ city.id }}">More Details</a></td>
+    </tr>
+    {% endfor %}
+</table>
+        
+        
+
+</body>
+    
+
+{% endblock %}

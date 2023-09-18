@@ -1,0 +1,24 @@
+{% extends 'base.jinja'%}
+
+{% block content %}
+
+<html>
+    <body>
+        <div class="new_form">
+        <h1>Add a New Destination</h1>
+        <form action="/bucketlist/new" method="POST">
+            <label for="city_name">Add City:</label>
+            <input type="text" name="city_name" id="city_name" />
+            <label for="dropdown">Select Country:</label>
+            <select id="dropdown" name="countries">
+                {% for country in countries %}
+                    <option value="{{ country.id }}">{{ country.country_name }}</option>
+                {% endfor %}
+            <input type="submit" value="Add Destination">
+        </form>
+    <p><a href="/bucketlist">Return to Bucketlist</a></p>
+    </div>
+    </body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.jinja'%}
+
+{% block content %}
+<div class="new_form">
+    <h1>Update Destination</h1>
+    <h2>Current Details:</h2>
+    <div>
+    <b>Country:</b> {{ country.country_name }}
+    <b>City:</b> {{ city.city_name }}
+    {% if city.visited %}
+        <span> Visited? &#9989;</span><br>
+    {% else %}
+        <span> Visited? &#x274C;</span><br> 
+    {% endif %} 
+    </div>
+
+    <h2>Update Details Here :</h2>
+    <form action="/bucketlist/{{ country_id }}{{ id }}" method="POST">
+    <label for="country_name">Country:</label>
+    <input type="text" name="country_name" id="country_name" value={{ country.country_name }} />
+
+    <label for="city_name">City:</label>
+    <input type="text" name="city_name" id="city_name" />    
+
+    <label for="visited">Destination Visited?</label>
+    <input type="checkbox" id="visited" name="visited" />
+    <button type="submit" id="edit_button">Update Destination</button>
+    </form>
+
+    <p><a href="/bucketlist">Return to Bucketlist</a></p>    
+</div>
+
+
+
+
+{% endblock %}
+

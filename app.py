@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -13,7 +13,7 @@ from models.country import Country
 
 @app.route("/")
 def home():
-    return "This is the home page - can be a blank page with a link"
+    return render_template('home.jinja')
 
 from controllers.city_controller import city_blueprint
 app.register_blueprint(city_blueprint)
