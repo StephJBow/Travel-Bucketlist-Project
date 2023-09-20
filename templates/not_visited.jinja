@@ -1,0 +1,27 @@
+{% extends 'base.jinja'%}
+
+{% block content %}
+<body>
+
+<table id="list_here">
+    <tr>
+        <th>Country</th>
+        <th>City</th>
+        <th>Visited</th>
+    </tr>
+
+    {% for city in cities %}
+    <tr>
+        {% if city.visited == False %}
+            <td>{{ city.country.country_name }}</td>
+            <td>{{ city.city_name }} </td>
+            <td><span> &#x274C;</span></td>
+        {% endif %}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+    
+
+{% endblock %}

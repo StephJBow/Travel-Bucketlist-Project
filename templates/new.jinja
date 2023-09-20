@@ -6,19 +6,37 @@
     <body>
         <div class="new_form">
         <h1>Add a New Destination</h1>
-        <form action="/bucketlist/new" method="POST">
-            <label for="city_name">Add City:</label>
+        <h3>Add new country:</h3>
+        <form id=indented_form action="/bucketlist/new/country" method="post">
+            <label for="country_name">New Country:</label>
+            <input type="text" name="country_name" id="country_name">
+            <input id="add_button" type="submit" value="Add New Country">
+        </form>
+        </div>
+<br>
+        <div class="new_form">
+        <h3>Add from existing countries:</h3>
+        <form id=indented_form action="/bucketlist/new" method="POST">
+            <label for="country_id">Country:</label>
+            <select name="country_id" id="country_id" >
+                {% for country in countries %}
+                    <option {% if country.id == country_id %} selected="selected" {%endif%} value="{{ country.id }}">{{country.country_name}}</option>
+                {% endfor %}  
+            </select>
+            <label for="city_name">City:</label>
             <input type="text" name="city_name" id="city_name" />
-            <label for="dropdown">Select Country:</label>
+            <input id="add_button" type="submit" value="Add Destination">
+        </form>
+        </div>
+    </body>
+</html>
+
+
+
+
+{% endblock %}
+
             <select id="dropdown" name="countries">
                 {% for country in countries %}
                     <option value="{{ country.id }}">{{ country.country_name }}</option>
                 {% endfor %}
-            <input type="submit" value="Add Destination">
-        </form>
-    <p><a href="/bucketlist">Return to Bucketlist</a></p>
-    </div>
-    </body>
-</html>
-
-{% endblock %}
