@@ -16,10 +16,13 @@
             <td>{{ city.country.country_name }}</td>
             <td>{{ city.city_name }} </td>
             <td><span> &#x274C;</span></td>
+            <td><a href="/bucketlist/{{ city.id }}"><b>More Details</b></a></td>
         {% endif %}</td>
     </tr>
     {% endfor %}
 </table>
+
+<br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>  
 
 </body>
     

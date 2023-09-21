@@ -1,25 +1,31 @@
 {% extends 'base.jinja'%}
 
 {% block content %}
-<div class="new_form">
-    <h1>Your Destination</h1>
+<body>
     
-    <b>Country:</b> {{ city.country.country_name }} <br>
-    <b>City:</b> {{ city.city_name }} <br>
+    <div class="new_header"> <img class="city_image" src = {{city.image_url}} >
+    <h1>Your Destination</h1></div>
 
-    {% if city.visited %}
+    <div class="new_text">
+    <b>Country:</b> {{ city.country.country_name }} <br>
+    <b>City:</b> {{ city.city_name }}</div>
+
+    <div class="visited">{% if city.visited %}
         <span><b> Visited? </b> &#9989;</span><br>
     {% else %}
-        <span><b>  Visited? </b>&#x274C;</span><br> 
-    {% endif %} 
+        <span><b>  Visited? </b>&#x274C;</span><br>  
+    {% endif %} </div>
     
 
-<p><a href="/bucketlist/{{ city.id }}/edit"><button>Update the details of this destination</button></a></p>
+<p><a href="/bucketlist/{{ city.id }}/edit"><button class="edit_button">Update the details of this destination</button></a></p>
 <form action="/bucketlist/{{ city.id }}/delete" method="post">
     <button type="submit" id="delete_button">Remove destination from bucketlist</button>
 </form>
 
+<br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>  
 
-</div>
+</body>
+
+
 {% endblock %}
 

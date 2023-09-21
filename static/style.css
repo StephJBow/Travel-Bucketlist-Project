@@ -12,12 +12,15 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #FDF1E0;
+    max-width: 100%;
+    height: auto;
     }
 
     .menu li {
         float: right;
         text-decoration: none;
         margin: 0;
+        padding-top: 10px;
         padding-right: 40px;
         overflow: hidden;
         font-size: 20px;
@@ -26,6 +29,10 @@ body {
 
     .menu li:hover {
         opacity: 0.8;
+    }
+
+    .update_header {
+        padding-left: 60px;
     }
 
     #list_here {
@@ -41,15 +48,27 @@ body {
         font-size: 24px;
     }
 
-    .new_form {
-        padding-left: 60px;
-        font-size: 24px;
-        line-height: 36px;
-        width: 100%;
-    }
-
     #indented_form  {
         padding-left: 80px;
+        font-size: 24px;
+    }
+
+    .current_details {
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 60px;
+    }
+
+    .updated_details {
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 60px;
+    }
+
+    #country_id {
+        font-size: 18px;
+        margin: 5px;
+        padding-right: 15px;
     }
 
     #add_button {
@@ -114,4 +133,64 @@ body {
         border: 3px #f47e3e;
         border-style: outset;
         border-radius: 10px;
+        margin-left: 60px;
+    }
+
+    .city_image {
+        width: 40%;
+        border-radius: 8px;
+        float: right;
+        margin-right: 120px;
+    }
+
+    .new_header {
+        padding-left: 60px;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .new_text {
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 60px;
+    }
+
+    .visited {
+        font-size: 24px;
+        line-height: 36px;
+        padding-left: 60px;
+    }
+
+    .edit_button {
+        margin-top: 22px; 
+        margin-left: 60px;
+        background-color: #f47e3e;
+        color: black;
+        padding: 10px 24px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: 3px black;
+        border-style: outset;
+        border-radius: 10px;
+    }
+
+    .new_form {
+        margin-left: 60px;
+    }
+
+    .new_form>h3 {
+        font-size: 24px;
+    }
+
+    .return_home {
+        font-size: 24px;
+        margin-left: 60px;
+        font-weight: bold;
+    }
+
+    .text_box {
+        font-size: 18px;
+        margin: 5px;
+        padding-right: 15px;
     }

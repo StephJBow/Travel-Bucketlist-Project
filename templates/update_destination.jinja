@@ -1,35 +1,42 @@
 {% extends 'base.jinja'%}
 
 {% block content %}
-<div class="new_form">
-    <h1>Update Destination</h1>
+
+    <h1 class="update_header">Update Destination</h1>
+
+    <div class="new_form">
     <h2>Current Details:</h2>
-    <div>
-    <b>Country:</b> {{ city.country.country_name }} <br>
+    </div>
+
+    <div class="current_details"><b>Country:</b> {{ city.country.country_name }} <br>
     <b>City:</b> {{ city.city_name }} <br>
     {% if city.visited %}
         <span> <b>Visited? </b>&#9989;</span><br>
     {% else %}
         <span> <b>Visited? </b>&#x274C;</span><br> 
     {% endif %} 
-    </div>
+    </div> <br>
 
-    <h2>New Details :</h2>
-    <form action="/bucketlist/{{ city.id }}/edit" method="POST">
+    <div class="new_form">
+    <h2>New Details :</h2> </div>
+    <form class="updated_details" action="/bucketlist/{{ city.id }}/edit" method="POST">
     <label for="country_name">Country:</label>
-    <input type="text" name="country_name" id="country_name" />
+    <input type="text" name="country_name" id="country_name" /><br>
 
     <label for="city_name">City:</label>
-    <input type="text" name="city_name" id="city_name" />    
+    <input type="text" name="city_name" id="city_name" /> <br>    
+    
+    <label for="image_url">Image URL:</label>
+    <input type="text" id="image_url" name="image_url"><br>
 
     <label for="visited">Destination Visited?</label>
     <input type="checkbox" id="visited" name="visited" /> <br>
 
     <button type="submit" id="edit_button">Update Destination</button>
     </form>
-
-    <p><a href="/bucketlist">Return to Bucketlist</a></p>    
 </div>
+    <br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>    
+
 
 
 

@@ -20,13 +20,14 @@
 
     <body>
     <header class="header">
-        {# <img src="/static/images/Child_pages.png" alt="Logo" class="logo" id="brain_logo"> #}
+        
         <nav>
             <ul class="menu">
-                <li><a href="/bucketlist">Full Bucketlist</a></li>
                 <li><a href="/bucketlist/new">Add New Destination</a></li>
                 <li><a href="/bucketlist/visited">Visited</a></li>
                 <li><a href="/bucketlist/notyetvisited">To Visit</a></li>
+                <li><a href="/bucketlist">Bucketlist</a></li>
+                <li><a href="/">Home</a></li>
             </ul>
         </nav>
     </header>
@@ -34,9 +35,5 @@
     {% block content %}
     {% endblock%}
     </body>
-
-    <footer>
-        ©BucketList PLC
-    </footer>
 
 </html>
