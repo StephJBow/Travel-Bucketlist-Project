@@ -4,7 +4,11 @@
 A web database for users to store details of countries and cities visited, and those they wish to visit.
 This project was built using Python, Flask and PostgreSQL. 
 
-
+‘My Travel Bucklist’ allows users to:
+- track countries and cities they want to visit and those they have visited
+- add new countries to their bucketlist and edit them
+- add and remove cities from countries in the bucketlist, and mark them as ‘visited’ or ‘to visit’
+- add photos or images to cities
 
 
 <!-- you should add a readme, it should contain the following -->
