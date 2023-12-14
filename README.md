@@ -1,6 +1,6 @@
-Travel BucketList
+# Travel BucketList
 
-Description
+## Description
 A web database for users to store details of countries and cities visited, and those they wish to visit.
 This project was built using Python, Flask and PostgreSQL. 
 
