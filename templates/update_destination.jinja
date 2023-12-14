@@ -2,30 +2,32 @@
 
 {% block content %}
 
-    <h1 class="update_header">Update Destination</h1>
+<h1 class="update_header">Update Destination</h1>
 
-    <div class="new_form">
+<div class="new_form">
     <h2>Current Details:</h2>
-    </div>
+</div>
 
-    <div class="current_details"><b>Country:</b> {{ city.country.country_name }} <br>
+<div class="current_details"><b>Country:</b> {{ city.country.country_name }} <br>
     <b>City:</b> {{ city.city_name }} <br>
     {% if city.visited %}
-        <span> <b>Visited? </b>&#9989;</span><br>
+    <span> <b>Visited? </b>&#9989;</span><br>
     {% else %}
-        <span> <b>Visited? </b>&#x274C;</span><br> 
-    {% endif %} 
-    </div> <br>
+    <span> <b>Visited? </b>&#x274C;</span><br>
+    {% endif %}
+</div> <br>
 
-    <div class="new_form">
-    <h2>New Details :</h2> </div>
-    <form class="updated_details" action="/bucketlist/{{ city.id }}/edit" method="POST">
+<div class="new_form">
+    <h2>New Details :</h2>
+</div>
+<form class="updated_details" action="/bucketlist/{{ city.id }}/edit" method="POST">
     <label for="country_name">Country:</label>
     <input type="text" name="country_name" id="country_name" /><br>
 
     <label for="city_name">City:</label>
-    <input type="text" name="city_name" id="city_name" /> <br>    
-    
+     {# we can prepopulate our edit forms with the content of the item we want to edit by adding that content under the 'value=' property in the element like below #}
+    <input type="text" name="city_name" id="city_name" value={{city.city_names}}/> <br>
+
     <label for="image_url">Image URL:</label>
     <input type="text" id="image_url" name="image_url"><br>
 
@@ -33,13 +35,13 @@
     <input type="checkbox" id="visited" name="visited" /> <br>
 
     <button type="submit" id="edit_button">Update Destination</button>
-    </form>
+</form>
 </div>
-    <br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>    
+<br>
+<p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>
 
 
 
 
 
 {% endblock %}
-

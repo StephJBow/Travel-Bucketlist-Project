@@ -2,11 +2,12 @@ from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.country import Country
 from models.city import City
+from services.city_services import handle_city_update
 from app import db
 
 city_blueprint = Blueprint("cities", __name__)
 
-
+# as mentioned prevously you should try and follow the restufl routing convetions naming your endpoints. here is a nice guide on the matter : https://restfulapi.net/resource-naming/
 @city_blueprint.route("/bucketlist")
 def show_bucketlist():
     all_countries = Country.query.all()
@@ -59,7 +60,18 @@ def show_one_destination(id):
 def edit_bucketlist(id):
     destination_to_edit = City.query.get(id)
     return render_template('update_destination.jinja', city=destination_to_edit)
+# we can consider extracting out logic and extra verbosity from our controller functions, we care more about _what_ are code is doing as opposed to _how_ its doing it. 
+# see below for example
+# this has the following benefits ..
 
+# 1. Separation of concerns
+# One of the core principles of software engineering is the separation of concerns. By moving business logic out of controllers and into separate components, you ensure that each component has a single responsibility. Controllers should primarily handle user input and orchestrate the flow of data, while logic related to data manipulation, validation, and business rules should be handled by other parts of the application.
+# 2. Code Reusability (keeps us DRY)
+# Extracting logic into separate modules or classes makes it more reusable. You can use the same logic in multiple controllers or even in different parts of your application. This reduces code duplication and leads to a more maintainable codebase.
+# 3. Scalable 
+# As your application grows, you may need to change or extend its functionality, if we have to do the same action several times, it helps if we have the logic to do that action central to one place if we suddenly need to change how we are doing that action we now need to just change the code in one place as apposed to every place we where doing that action.
+# 4. Readability 
+# Controllers are typically responsible for managing the flow of requests and responses. When logic is mixed with controller code, it can make controllers bulky and less readable. Extracting logic into separate files/folders leads to cleaner, more focused, and more readable code. This improves the overall maintainability of the application.
 @city_blueprint.route("/bucketlist/<int:id>/edit", methods = ['POST'])
 def update_destination(id):
     city_to_update = City.query.get(id)
@@ -74,6 +86,17 @@ def update_destination(id):
     db.session.commit()
     return redirect (f"/bucketlist/{id}")
 
+##############################
+# example of code after extracting out logic
+##############################
+@city_blueprint.route("/bucketlist/<int:id>/edit", methods = ['POST'])
+def update_destination(id):
+    handle_city_update(request.form, id)
+    return redirect (f"/bucketlist/{id}")
+
+
+
+
 @city_blueprint.route("/bucketlist/<int:id>/delete", methods= ['POST'])
 def delete_destination(id):
     city_to_delete = City.query.get(id)
@@ -81,6 +104,8 @@ def delete_destination(id):
     db.session.commit()
     return redirect (f"/bucketlist/{id}") 
 
+
+# should tidy the below up
 
 # chile = Country(country_name = "Chile")
 # india = Country(country_name = "India")
