@@ -2,7 +2,7 @@
 
 ## Description
 A web database for users to store details of countries and cities visited, and those they wish to visit.
-This project was built using Python, Flask and PostgreSQL, and using HTML and CSS were used for frontend styling.
+My second solo project, this website was built using Python, Flask and PostgreSQL, and using HTML and CSS were used for frontend styling.
 
 <img align="center" width="948" alt="HomePage" src="https://github.com/StephJBow/Travel-Bucketlist-Project/assets/136998085/4f8e9637-ab9b-4bcc-9d3f-2ba2f3182f5e">
 <br></br>
