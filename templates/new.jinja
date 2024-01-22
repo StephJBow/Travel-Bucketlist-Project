@@ -7,7 +7,7 @@
         <div class="new_form">
         <h1>Add a New Destination</h1>
         <h3>Add from existing countries:</h3>
-        <form id=indented_form action="/bucketlist/new" method="POST">
+        <form id=indented_form action="/cities/new" method="POST">
             <label for="country_id">Country:</label>
             <select name="country_id" id="country_id" >
                 {% for country in countries %}
@@ -27,14 +27,14 @@
 {# try and keep your elements properply indented, it makes the code harder to read, you can always right click -> format document in vscode #}
         <div class="new_form">
         <h3>Add new country:</h3>
-        <form id=indented_form action="/bucketlist/new/country" method="post">
+        <form id=indented_form action="/cities/new/country" method="post">
             <label for="country_name">New Country:</label>
             <input class="text_box" type="text" name="country_name" id="country_name"> <br>
             <input id="add_button" type="submit" value="Add New Country">
         </form>
         </div>
 
-    <br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>  
+    <br><p><a href="/cities" class="return_home">Return to Bucketlist</a></p>  
     
     </body>
 </html>

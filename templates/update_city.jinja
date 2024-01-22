@@ -20,13 +20,13 @@
 <div class="new_form">
     <h2>New Details :</h2>
 </div>
-<form class="updated_details" action="/bucketlist/{{ city.id }}/edit" method="POST">
+<form class="updated_details" action="/cities/{{ city.id }}/edit" method="POST">
     <label for="country_name">Country:</label>
     <input type="text" name="country_name" id="country_name" /><br>
 
     <label for="city_name">City:</label>
      {# we can prepopulate our edit forms with the content of the item we want to edit by adding that content under the 'value=' property in the element like below #}
-    <input type="text" name="city_name" id="city_name" value={{city.city_names}}/> <br>
+    <input type="text" name="city_name" id="city_name" value={{city.city_names}}> <br>
 
     <label for="image_url">Image URL:</label>
     <input type="text" id="image_url" name="image_url"><br>
@@ -38,7 +38,7 @@
 </form>
 </div>
 <br>
-<p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>
+<p><a href="/cities" class="return_home">Return to Bucketlist</a></p>
 
 
 

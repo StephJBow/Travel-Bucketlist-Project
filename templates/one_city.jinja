@@ -17,12 +17,12 @@
     {% endif %} </div>
     
 
-<p><a href="/bucketlist/{{ city.id }}/edit"><button class="edit_button">Update the details of this destination</button></a></p>
-<form action="/bucketlist/{{ city.id }}/delete" method="post">
+<p><a href="/cities/{{ city.id }}/edit"><button class="edit_button">Update the details of this destination</button></a></p>
+<form action="/cities/{{ city.id }}/delete" method="POST">
     <button type="submit" id="delete_button">Remove destination from bucketlist</button>
 </form>
 
-<br><p><a href="/bucketlist" class="return_home">Return to Bucketlist</a></p>  
+<br><p><a href="/cities" class="return_home">Return to Bucketlist</a></p>  
 
 </body>
 
