@@ -66,16 +66,6 @@ def update_city(id):
     db.session.commit()
     return redirect (f"/cities/{id}")
 
-##############################
-# example of code after extracting out logic
-##############################
-# @city_blueprint.route("/bucketlist/<int:id>/edit", methods = ['POST'])
-# def update_destination(id):
-#     handle_city_update(request.form, id)
-#     return redirect (f"/bucketlist/{id}")
-
-
-
 @city_blueprint.route("/cities/<int:id>/delete", methods= ['POST'])
 def delete_city(id):
     city_to_delete = City.query.get(id)
