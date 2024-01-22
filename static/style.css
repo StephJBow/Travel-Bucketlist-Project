@@ -16,181 +16,181 @@ body {
     height: auto;
     }
 
-    .menu li {
-        float: right;
-        text-decoration: none;
-        margin: 0;
-        padding-top: 10px;
-        padding-right: 40px;
-        overflow: hidden;
-        font-size: 20px;
-        font-weight: bold;
-    }
+.menu li {
+    float: right;
+    text-decoration: none;
+    margin: 0;
+    padding-top: 10px;
+    padding-right: 40px;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: bold;
+}
 
-    .menu li:hover {
-        opacity: 0.8;
-    }
+.menu li:hover {
+    opacity: 0.8;
+}
 
-    .update_header {
-        padding-left: 60px;
-    }
+.update_header {
+    padding-left: 60px;
+}
 
-    #list_here {
-        font-size: 24px;
-        line-height: 36px;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+#city_list {
+    font-size: 24px;
+    line-height: 36px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    th {
-        text-align: left;
-        font-size: 24px;
-    }
+th {
+    text-align: left;
+    font-size: 24px;
+}
 
-    #indented_form  {
-        padding-left: 80px;
-        font-size: 24px;
-    }
+#indented_form  {
+    padding-left: 80px;
+    font-size: 24px;
+}
 
-    .current_details {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 60px;
-    }
+.current_details {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 60px;
+}
 
-    .updated_details {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 60px;
-    }
+.updated_details {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 60px;
+}
 
-    #country_id {
-        font-size: 18px;
-        margin: 5px;
-        padding-right: 15px;
-    }
+#country_id {
+    font-size: 18px;
+    margin: 5px;
+    padding-right: 15px;
+}
 
-    #add_button {
-        margin-top: 12px; 
-        background-color: #f47e3e;
-        color: black;
-        padding: 5px 24px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border: 3px black;
-        border-style: outset;
-        border-radius: 10px;
-    }
+#add_button {
+    margin-top: 12px; 
+    background-color: #f47e3e;
+    color: black;
+    padding: 5px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 3px black;
+    border-style: outset;
+    border-radius: 10px;
+}
 
-    #add_button:hover{
-        opacity: 0.8;
-    }
+#add_button:hover{
+    opacity: 0.8;
+}
 
-    footer {
-        padding-top: 30px;
-        padding-left: 20px;
-        position: fixed relative;
-        bottom: 0;
-        width: 100%;
-        height: 30px;
-        text-align: left;
-    }
+footer {
+    padding-top: 30px;
+    padding-left: 20px;
+    position: fixed relative;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: left;
+}
 
-    button {
-        margin-top: 22px; 
-        background-color: #f47e3e;
-        color: black;
-        padding: 10px 24px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border: 3px black;
-        border-style: outset;
-        border-radius: 10px;
-    }
+button {
+    margin-top: 22px; 
+    background-color: #f47e3e;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 3px black;
+    border-style: outset;
+    border-radius: 10px;
+}
 
-    button:hover{
-        opacity: 0.8;
-    }
+button:hover{
+    opacity: 0.8;
+}
 
-    a:link {
-        color: #d47745;
-    }
+a:link {
+    color: #d47745;
+}
 
-    a:visited {
-        color: #d47745;
-    }
+a:visited {
+    color: #d47745;
+}
 
-    a:hover {
-            opacity: 0.5;
-        }
+a:hover {
+    opacity: 0.5;
+}
 
-    #delete_button {
-        background-color: black;
-        color: #f47e3e;
-        border: 3px #f47e3e;
-        border-style: outset;
-        border-radius: 10px;
-        margin-left: 60px;
-    }
+#delete_button {
+    background-color: black;
+    color: #f47e3e;
+    border: 3px #f47e3e;
+    border-style: outset;
+    border-radius: 10px;
+    margin-left: 60px;
+}
 
-    .city_image {
-        width: 40%;
-        border-radius: 8px;
-        float: right;
-        margin-right: 120px;
-    }
+.city_image {
+    width: 40%;
+    border-radius: 8px;
+    float: right;
+    margin-right: 120px;
+}
 
-    .new_header {
-        padding-left: 60px;
-        font-size: 24px;
-        line-height: 36px;
-    }
+.new_header {
+    padding-left: 60px;
+    font-size: 24px;
+    line-height: 36px;
+}
 
-    .new_text {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 60px;
-    }
+.new_text {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 60px;
+}
 
-    .visited {
-        font-size: 24px;
-        line-height: 36px;
-        padding-left: 60px;
-    }
+.visited {
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 60px;
+}
 
-    .edit_button {
-        margin-top: 22px; 
-        margin-left: 60px;
-        background-color: #f47e3e;
-        color: black;
-        padding: 10px 24px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        border: 3px black;
-        border-style: outset;
-        border-radius: 10px;
-    }
+.edit_button {
+    margin-top: 22px; 
+    margin-left: 60px;
+    background-color: #f47e3e;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: 3px black;
+    border-style: outset;
+    border-radius: 10px;
+}
 
-    .new_form {
-        margin-left: 60px;
-    }
+.new_form {
+    margin-left: 60px;
+}
 
-    .new_form>h3 {
-        font-size: 24px;
-    }
+.new_form>h3 {
+    font-size: 24px;
+}
 
-    .return_home {
-        font-size: 24px;
-        margin-left: 60px;
-        font-weight: bold;
-    }
+.return_home {
+    font-size: 24px;
+    margin-left: 60px;
+    font-weight: bold;
+}
 
-    .text_box {
-        font-size: 18px;
-        margin: 5px;
-        padding-right: 15px;
-    }
+.text_box {
+    font-size: 18px;
+    margin: 5px;
+    padding-right: 15px;
+}
