@@ -26,3 +26,12 @@ https://github.com/StephJBow/Travel-Bucketlist-Project/assets/136998085/7b511f49
 ![Single city](https://github.com/StephJBow/Travel-Bucketlist-Project/assets/136998085/604c6997-aab7-4dc2-b36a-5a697b98fdd1)
 ![Add new](https://github.com/StephJBow/Travel-Bucketlist-Project/assets/136998085/9bf555a7-c817-4cc3-9fe8-04fa6efe1835)
 
+## Next steps
+
+There are some features for this website that I would like to add or improve upon in future. These include:
+
+- the ability to add multiple images to each city and display them in a carousel;
+
+- the ability to add filter or sorting functionality for the destination display tables; and
+
+- improving the visual design of the destination tables, changing this from a list to image buttons using Flexbox
